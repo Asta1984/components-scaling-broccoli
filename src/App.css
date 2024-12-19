@@ -40,3 +40,23 @@
 .read-the-docs {
   color: #888;
 }
+body {
+  /* AMOLED-friendly gradient background */
+  background: radial-gradient(circle, #0082aa, #1e1241, #000000);
+  background-size: 300% 300%;
+  font-family: 'Arial', sans-serif;
+  animation: gradientMove 10s ease infinite; /* Smooth motion */
+}
+
+/* Gradient animation */
+@keyframes gradientMove {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}

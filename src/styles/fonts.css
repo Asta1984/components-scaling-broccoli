@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'OnlinePrivileges';
+  src: url('/fonts/OnlinePrivileges.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Enterpriser';
+  src: url('/fonts/Enterpriser.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Type_writer';
+  src: url('/fonts/type_writer.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Typewriterbold';
+  src: url('/fonts/TypewriterzDemoBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Typewriteritalic';
+  src: url('/fonts/TypewriterzDemoItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Typewriter';
+  src: url('/fonts/TypewriterzDemoRegular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
