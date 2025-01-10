@@ -1,12 +1,10 @@
 "use client"
-
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
 
-export default function sewantikaSvganimation() {
+export default function AnimateSvg() {
     const ref = useRef(null)
     const isInView = useInView(ref, { once: false, amount: 0.9 })
-
     return (
         <div ref={ref} className="h-screen flex items-center justify-center">
             <motion.img
@@ -19,7 +17,7 @@ export default function sewantikaSvganimation() {
                 }}
                 animate={{
                     opacity: isInView ? 1 : 0,
-                    scale: isInView ?  1 : 1,
+                    scale: isInView ? 7 : 1,
                     rotate: 70
                 }}
                 transition={{
@@ -31,4 +29,3 @@ export default function sewantikaSvganimation() {
         </div>
     )
 }
-
