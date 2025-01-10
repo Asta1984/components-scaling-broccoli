@@ -16,7 +16,7 @@ export default function FixedGrowingSvg() {
 
   return (
     <div ref={containerRef} className="relative">
-      <div className="h-[300vh] bg-gradient-to-b from-blue-500 to-purple-500" />
+      <div className="h-[300vh]"/>
       <div className="fixed inset-0 flex items-center justify-center pointer-events-none">
         <motion.svg
           style={{
