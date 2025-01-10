@@ -1,6 +1,5 @@
 import './App.css'
 import GrowingSvg from './components/GrowingSvg'
-import FixedGrowingSvg from './components/FixedGrowingSvg'
 function App() {
 
 
@@ -8,9 +7,8 @@ function App() {
     <>
     
     <GrowingSvg/>
-    <div>
-    <FixedGrowingSvg/>
-    </div>
+    
+ 
     
     </>
   )
