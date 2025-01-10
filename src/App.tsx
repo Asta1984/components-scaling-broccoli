@@ -1,14 +1,17 @@
 import './App.css'
-import { CardWithForm } from './components/walletcard'
-import { BackgroundGradient } from './components/ui/background-gradient'
+import GrowingSvg from './components/GrowingSvg'
+import FixedGrowingSvg from './components/FixedGrowingSvg'
 function App() {
 
 
   return (
     <>
-    <BackgroundGradient>
-    <CardWithForm/>
-    </BackgroundGradient>
+    
+    <GrowingSvg/>
+    <div>
+    <FixedGrowingSvg/>
+    </div>
+    
     </>
   )
 }

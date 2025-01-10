@@ -41,10 +41,9 @@
   color: #888;
 }
 body {
-  /* AMOLED-friendly gradient background */
-  background: radial-gradient(circle, #0082aa, #1e1241, #000000);
+  
+  background: radial-gradient(circle, #011616, #000000, #049746);
   background-size: 300% 300%;
-  font-family: 'Arial', sans-serif;
   animation: gradientMove 10s ease infinite; /* Smooth motion */
 }
 
