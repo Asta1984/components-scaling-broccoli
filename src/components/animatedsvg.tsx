@@ -13,15 +13,15 @@ export default function AnimateSvg() {
                 className="w-24 h-24"
                 initial={{
                     opacity: 0,
-                    scale: 1
+                    scale: 0.1
                 }}
                 animate={{
                     opacity: isInView ? 1 : 0,
-                    scale: isInView ? 7 : 1,
-                    rotate: 70
+                    scale: isInView ? 4 : 1,
+                    rotate: 90
                 }}
                 transition={{
-                    duration: 5,
+                    duration: 2,
                     ease: "easeOut"
                 }}
                 layout={true}
