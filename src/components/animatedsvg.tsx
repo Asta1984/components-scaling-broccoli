@@ -17,8 +17,8 @@ export default function AnimateSvg() {
                 }}
                 animate={{
                     opacity: isInView ? 1 : 0,
-                    scale: isInView ? 4 : 1,
-                    rotate: 90
+                    scale: isInView ? 5 : 1,
+                    rotate: 360
                 }}
                 transition={{
                     duration: 2,

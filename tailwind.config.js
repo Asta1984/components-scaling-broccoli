@@ -121,7 +121,7 @@ export default {
     				'100%': {
     					transform: 'translateY(0)'
     				}
-    			}
+    			},
     		},
     		animation: {
     			'accordion-down': 'accordion-down 0.2s ease-out',
@@ -131,7 +131,8 @@ export default {
     			third: 'moveInCircle 40s linear infinite',
     			fourth: 'moveHorizontal 40s ease infinite',
     			fifth: 'moveInCircle 20s ease infinite',
-    			grid: 'grid 15s linear infinite'
+    			grid: 'grid 15s linear infinite',
+    			'wave-pulse': 'wave-pulse 4s ease-in-out infinite'
     		},
     		plugins: [
     			'import("tailwindcss-animate")'
