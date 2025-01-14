@@ -1,8 +1,9 @@
-import './App.css'
+
+import './App.css';
 import SquaresDemo from './components/SquareBackground'
+
+
 function App() {
-
-
   return (
        <>
        <SquaresDemo />
