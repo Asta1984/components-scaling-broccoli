@@ -1,13 +1,11 @@
 
 import './App.css';
-import SquaresDemo from './components/SquareBackground'
-
+import { Landing } from './components/Landing';
 
 function App() {
   return (
        <>
-       <SquaresDemo />
-
+      
        </>
   )
 }
