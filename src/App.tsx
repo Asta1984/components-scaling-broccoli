@@ -1,11 +1,11 @@
-
 import './App.css';
-import { Landing } from './components/Landing';
+import { Footerdemo } from './components/ui/footer-section';
+
 
 function App() {
   return (
        <>
-      
+       <Footerdemo/>
        </>
   )
 }
