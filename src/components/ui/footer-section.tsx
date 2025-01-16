@@ -3,18 +3,17 @@ import { Button } from "../ui/button"
 import { Input } from "../ui/input"
 import { Label } from "../ui/label"
 import { Switch } from "../ui/switch"
-import { Textarea } from "../ui/textarea"
+
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "../ui/tooltip"
-import { Facebook, Instagram, Linkedin, Moon, Send, Sun, Twitter } from "lucide-react"
+import { Instagram, Linkedin, Moon, Send, Sun, Twitter } from "lucide-react"
 
 function Footerdemo() {
   const [isDarkMode, setIsDarkMode] = React.useState(true)
-  const [isChatOpen, setIsChatOpen] = React.useState(false)
 
   React.useEffect(() => {
     if (isDarkMode) {
@@ -29,8 +28,8 @@ function Footerdemo() {
       <div className="container mx-auto px-4 py-12 md:px-6 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="relative">
-            <h2 className="mb-4 text-3xl font-bold tracking-tight">Stay Connected</h2>
-            <p className="mb-6 text-muted-foreground">
+            <h2 className="mb-4 text-3xl font-OnlinePrivileges tracking-tight">Stay Connected</h2>
+            <p className="mb-6 font-Type_writer text-xs">
               Join our newsletter for the latest updates and exclusive offers.
             </p>
             <form className="relative">
@@ -51,8 +50,8 @@ function Footerdemo() {
             <div className="absolute -right-4 top-0 h-24 w-24 rounded-full bg-primary/10 blur-2xl" />
           </div>
           <div>
-            <h3 className="mb-4 text-lg font-semibold">Quick Links</h3>
-            <nav className="space-y-2 text-sm">
+            <h3 className="mb-4 text-lg font-OnlinePrivileges">Quick Links</h3>
+            <nav className="space-y-2 font-Type_writer text-xs">
               <a href="#" className="block transition-colors hover:text-primary">
                 Home
               </a>
@@ -65,36 +64,19 @@ function Footerdemo() {
               <a href="#" className="block transition-colors hover:text-primary">
                 Products
               </a>
-              <a href="#" className="block transition-colors hover:text-primary">
-                Contact
-              </a>
             </nav>
           </div>
           <div>
-            <h3 className="mb-4 text-lg font-semibold">Contact Us</h3>
-            <address className="space-y-2 text-sm not-italic">
-              <p>123 Innovation Street</p>
-              <p>Tech City, TC 12345</p>
-              <p>Phone: (123) 456-7890</p>
-              <p>Email: hello@example.com</p>
+            <h3 className="mb-4 text-lg font-OnlinePrivileges">Contact Us</h3>
+            <address className="space-y-2 font-Type_writer text-xs ">
+              <p></p>
+              <p>Lake View Road, Shymala Hills, Bhopal, Madhya Pradesh</p>
+              <p>Tel No : (+91) 706-745-6439</p>
             </address>
           </div>
           <div className="relative">
-            <h3 className="mb-4 text-lg font-semibold">Follow Us</h3>
-            <div className="mb-6 flex space-x-4">
-              <TooltipProvider>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <Button variant="outline" size="icon" className="rounded-full">
-                      <Facebook className="h-4 w-4" />
-                      <span className="sr-only">Facebook</span>
-                    </Button>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p>Follow us on Facebook</p>
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
+            <h3 className="mb-4 text-lg font-OnlinePrivileges">Follow Us</h3>
+            <div className=" mb-6 flex justify-center space-x-4">
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger asChild>
@@ -150,8 +132,8 @@ function Footerdemo() {
           </div>
         </div>
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t pt-8 text-center md:flex-row">
-          <p className="text-sm text-muted-foreground">
-            © 2024 Your Company. All rights reserved.
+          <p className="font-Type_writer text-xs">
+            © 2025 Sewantika. All rights reserved.
           </p>
           <nav className="flex gap-4 text-sm">
             <a href="#" className="transition-colors hover:text-primary">
