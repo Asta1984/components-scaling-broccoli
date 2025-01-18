@@ -1,8 +1,17 @@
 import * as React from "react"
+import { Link } from "react-router-dom"
 import { Button } from "../ui/button"
 import { Input } from "../ui/input"
 import { Label } from "../ui/label"
 import { Switch } from "../ui/switch"
+import {
+  FaTwitter,
+  FaInstagram,
+  FaLinkedinIn,
+  FaPaperPlane,
+  FaSun,
+  FaMoon
+} from "react-icons/fa"
 
 import {
   Tooltip,
@@ -10,7 +19,6 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "../ui/tooltip"
-import { Instagram, Linkedin, Moon, Send, Sun, Twitter } from "lucide-react"
 
 function Footerdemo() {
   const [isDarkMode, setIsDarkMode] = React.useState(true)
@@ -43,7 +51,7 @@ function Footerdemo() {
                 size="icon"
                 className="absolute right-1 top-1 h-8 w-8 rounded-full bg-primary text-primary-foreground transition-transform hover:scale-105"
               >
-                <Send className="h-4 w-4" />
+                <FaPaperPlane className="h-5 w-5" />
                 <span className="sr-only">Subscribe</span>
               </Button>
             </form>
@@ -52,23 +60,23 @@ function Footerdemo() {
           <div>
             <h3 className="mb-4 text-lg font-OnlinePrivileges">Quick Links</h3>
             <nav className="space-y-2 font-Type_writer text-xs">
-              <a href="#" className="block transition-colors hover:text-primary">
+              <Link to="/" className="block transition-colors hover:text-primary">
                 Home
-              </a>
-              <a href="#" className="block transition-colors hover:text-primary">
+              </Link>
+              <Link to="/about" className="block transition-colors hover:text-primary">
                 About Us
-              </a>
-              <a href="#" className="block transition-colors hover:text-primary">
+              </Link>
+              <Link to="/services" className="block transition-colors hover:text-primary">
                 Services
-              </a>
-              <a href="#" className="block transition-colors hover:text-primary">
+              </Link>
+              <Link to="/products" className="block transition-colors hover:text-primary">
                 Products
-              </a>
+              </Link>
             </nav>
           </div>
           <div>
             <h3 className="mb-4 text-lg font-OnlinePrivileges">Contact Us</h3>
-            <address className="space-y-2 font-Type_writer text-xs ">
+            <address className="space-y-2 font-Type_writer text-xs">
               <p></p>
               <p>Lake View Road, Shymala Hills, Bhopal, Madhya Pradesh</p>
               <p>Tel No : (+91) 706-745-6439</p>
@@ -76,12 +84,12 @@ function Footerdemo() {
           </div>
           <div className="relative">
             <h3 className="mb-4 text-lg font-OnlinePrivileges">Follow Us</h3>
-            <div className=" mb-6 flex justify-center space-x-4">
+            <div className="mb-6 flex justify-center space-x-4">
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <Button variant="outline" size="icon" className="rounded-full">
-                      <Twitter className="h-4 w-4" />
+                    <Button variant="outline" size="sm" className="h-10 w-10 rounded-full">
+                      <FaTwitter className="h-5 w-5" />
                       <span className="sr-only">Twitter</span>
                     </Button>
                   </TooltipTrigger>
@@ -93,8 +101,8 @@ function Footerdemo() {
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <Button variant="outline" size="icon" className="rounded-full">
-                      <Instagram className="h-4 w-4" />
+                    <Button variant="outline" size="sm" className="h-10 w-10 rounded-full">
+                      <FaInstagram className="h-5 w-5" />
                       <span className="sr-only">Instagram</span>
                     </Button>
                   </TooltipTrigger>
@@ -106,8 +114,8 @@ function Footerdemo() {
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <Button variant="outline" size="icon" className="rounded-full">
-                      <Linkedin className="h-4 w-4" />
+                    <Button variant="outline" size="sm" className="h-10 w-10 rounded-full">
+                      <FaLinkedinIn className="h-5 w-5" />
                       <span className="sr-only">LinkedIn</span>
                     </Button>
                   </TooltipTrigger>
@@ -118,13 +126,13 @@ function Footerdemo() {
               </TooltipProvider>
             </div>
             <div className="flex items-center space-x-2">
-              <Sun className="h-4 w-4" />
+              <FaSun className="h-5 w-5" />
               <Switch
                 id="dark-mode"
                 checked={isDarkMode}
                 onCheckedChange={setIsDarkMode}
               />
-              <Moon className="h-4 w-4" />
+              <FaMoon className="h-5 w-5" />
               <Label htmlFor="dark-mode" className="sr-only">
                 Toggle dark mode
               </Label>
@@ -136,15 +144,15 @@ function Footerdemo() {
             © 2025 Sewantika. All rights reserved.
           </p>
           <nav className="flex gap-4 text-sm">
-            <a href="#" className="transition-colors hover:text-primary">
+            <Link to="/privacy" className="transition-colors hover:text-primary">
               Privacy Policy
-            </a>
-            <a href="#" className="transition-colors hover:text-primary">
+            </Link>
+            <Link to="/terms" className="transition-colors hover:text-primary">
               Terms of Service
-            </a>
-            <a href="#" className="transition-colors hover:text-primary">
+            </Link>
+            <Link to="/cookies" className="transition-colors hover:text-primary">
               Cookie Settings
-            </a>
+            </Link>
           </nav>
         </div>
       </div>
