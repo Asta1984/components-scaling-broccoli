@@ -1,35 +1,35 @@
-import * as React from "react"
-import { Link } from "react-router-dom"
-import { Button } from "../ui/button"
-import { Input } from "../ui/input"
-import { Label } from "../ui/label"
-import { Switch } from "../ui/switch"
+import * as React from "react";
+import { Link } from "react-router-dom";
+import { Button } from "../ui/button";
+import { Input } from "../ui/input";
+import { Label } from "../ui/label";
+import { Switch } from "../ui/switch";
 import {
   FaTwitter,
   FaInstagram,
   FaLinkedinIn,
   FaPaperPlane,
   FaSun,
-  FaMoon
-} from "react-icons/fa"
+  FaMoon,
+} from "react-icons/fa";
 
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "../ui/tooltip"
+} from "../ui/tooltip";
 
 function Footerdemo() {
-  const [isDarkMode, setIsDarkMode] = React.useState(true)
+  const [isDarkMode, setIsDarkMode] = React.useState(true);
 
   React.useEffect(() => {
     if (isDarkMode) {
-      document.documentElement.classList.add("dark")
+      document.documentElement.classList.add("dark");
     } else {
-      document.documentElement.classList.remove("dark")
+      document.documentElement.classList.remove("dark");
     }
-  }, [isDarkMode])
+  }, [isDarkMode]);
 
   return (
     <footer className="relative border-t bg-background text-foreground transition-colors duration-300">
@@ -48,10 +48,10 @@ function Footerdemo() {
               />
               <Button
                 type="submit"
-                size="icon"
-                className="absolute right-1 top-1 h-8 w-8 rounded-full bg-primary text-primary-foreground transition-transform hover:scale-105"
+                size="sm"
+                className="absolute right-1 top-1 h-8 rounded-full bg-primary text-primary-foreground transition-transform hover:scale-105"
               >
-                <FaPaperPlane className="h-5 w-5" />
+                <FaPaperPlane className="h-3 w-3" />
                 <span className="sr-only">Subscribe</span>
               </Button>
             </form>
@@ -88,23 +88,35 @@ function Footerdemo() {
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <Button variant="outline" size="sm" className="h-10 w-10 rounded-full">
-                      <FaTwitter className="h-5 w-5" />
-                      <span className="sr-only">Twitter</span>
-                    </Button>
+                    <a
+                      href="https://x.com/mandal_sal88300"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button variant="outline" size="sm" className="h-10 w-10 rounded-full">
+                        <FaTwitter className="h-5 w-5" />
+                        <span className="sr-only">Twitter</span>
+                      </Button>
+                    </a>
                   </TooltipTrigger>
                   <TooltipContent>
-                    <p>Follow us on Twitter</p>
+                    <p>Follow us on X</p>
                   </TooltipContent>
                 </Tooltip>
               </TooltipProvider>
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <Button variant="outline" size="sm" className="h-10 w-10 rounded-full">
-                      <FaInstagram className="h-5 w-5" />
-                      <span className="sr-only">Instagram</span>
-                    </Button>
+                    <a
+                      href="https://www.instagram.com/abhisheksinghh8/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button variant="outline" size="sm" className="h-10 w-10 rounded-full">
+                        <FaInstagram className="h-5 w-5" />
+                        <span className="sr-only">Instagram</span>
+                      </Button>
+                    </a>
                   </TooltipTrigger>
                   <TooltipContent>
                     <p>Follow us on Instagram</p>
@@ -114,10 +126,16 @@ function Footerdemo() {
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <Button variant="outline" size="sm" className="h-10 w-10 rounded-full">
-                      <FaLinkedinIn className="h-5 w-5" />
-                      <span className="sr-only">LinkedIn</span>
-                    </Button>
+                    <a
+                      href="https://www.linkedin.com/in/salil-m-3a73b1138/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button variant="outline" size="sm" className="h-10 w-10 rounded-full">
+                        <FaLinkedinIn className="h-5 w-5" />
+                        <span className="sr-only">LinkedIn</span>
+                      </Button>
+                    </a>
                   </TooltipTrigger>
                   <TooltipContent>
                     <p>Connect with us on LinkedIn</p>
@@ -125,7 +143,7 @@ function Footerdemo() {
                 </Tooltip>
               </TooltipProvider>
             </div>
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center justify-center space-x-2">
               <FaSun className="h-5 w-5" />
               <Switch
                 id="dark-mode"
@@ -140,9 +158,7 @@ function Footerdemo() {
           </div>
         </div>
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t pt-8 text-center md:flex-row">
-          <p className="font-Type_writer text-xs">
-            © 2025 Sewantika. All rights reserved.
-          </p>
+          <p className="font-Type_writer text-xs">© 2025 Sewantika. All rights reserved.</p>
           <nav className="flex gap-4 text-sm">
             <Link to="/privacy" className="transition-colors hover:text-primary">
               Privacy Policy
@@ -157,7 +173,7 @@ function Footerdemo() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
 
-export { Footerdemo }
+export { Footerdemo };
