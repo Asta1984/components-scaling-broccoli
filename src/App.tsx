@@ -1,16 +1,12 @@
-import './App.css';
+//import './App.css';
 import { BrowserRouter as Router } from 'react-router-dom';
-import Landing from './components/Landing';
-import { ThemeToggle } from './components/ui/theme-toggle';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
        <>
         <Router>
-          <div className='flex justify-center'>
-            <ThemeToggle />
-          </div>
-          <Landing />
+          <Navbar />
         </Router>
        </>
   )
