@@ -1,16 +1,13 @@
-import * as React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
-import { Label } from "../ui/label";
-import { Switch } from "../ui/switch";
+import { ThemeToggle } from "./theme-toggle";
+
 import {
   FaTwitter,
   FaInstagram,
   FaLinkedinIn,
   FaPaperPlane,
-  FaSun,
-  FaMoon,
 } from "react-icons/fa";
 
 import {
@@ -21,33 +18,11 @@ import {
 } from "../ui/tooltip";
 
 function Footerdemo() {
-  const [isDarkMode, setIsDarkMode] = React.useState(true);
 
-  React.useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [isDarkMode]);
 
   return (
     <footer className="relative border-t bg-background text-foreground transition-colors duration-300">
-      <div className="absolute -top-16 left-0 w-full overflow-hidden leading-none">
-        <svg
-          className="relative block h-16 w-full"
-          data-name="Layer 1"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
-            className="fill-current"
-          ></path>
-        </svg>
-      </div>
-      <div className="container mx-auto px-4 py-12 md:px-6 lg:px-8">
+      <div className="mx-auto px-4 py-12 md:px-6 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="relative">
             <h2 className="mb-4 text-3xl font-OnlinePrivileges tracking-tight">Stay Connected</h2>
@@ -97,7 +72,7 @@ function Footerdemo() {
             </address>
           </div>
           <div className="relative">
-            <h3 className="mb-4 text-lg font-OnlinePrivileges">Follow Us</h3>
+            <h3 className="mb-4 flex justify-center text-lg font-OnlinePrivileges">Follow Us</h3>
             <div className="mb-6 flex justify-center space-x-4">
               <TooltipProvider>
                 <Tooltip>
@@ -157,17 +132,8 @@ function Footerdemo() {
                 </Tooltip>
               </TooltipProvider>
             </div>
-            <div className="flex items-center justify-center space-x-2">
-              <FaSun className="h-5 w-5" />
-              <Switch
-                id="dark-mode"
-                checked={isDarkMode}
-                onCheckedChange={setIsDarkMode}
-              />
-              <FaMoon className="h-5 w-5" />
-              <Label htmlFor="dark-mode" className="sr-only">
-                Toggle dark mode
-              </Label>
+            <div className="flex justify-center">
+              <ThemeToggle />
             </div>
           </div>
         </div>
