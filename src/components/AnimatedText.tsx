@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 interface AnimatedTextProps {
   text: string;
   className?: string;
@@ -6,6 +7,13 @@ interface AnimatedTextProps {
 export function AnimatedText({ text, className = '' }: AnimatedTextProps) {
 
   return (
+    <motion.div
+    initial={{ y: 0, opacity: 0 }}
+    whileInView={{ y: 0, opacity: 1 }}
+    viewport={{ once: true, amount: 0.6 }} 
+    transition={{ duration: 1, ease: "easeOut" }}
+    exit={{ opacity: 1 }}
+  >
     <svg
       width="100%"
       height="100%"
@@ -49,5 +57,6 @@ export function AnimatedText({ text, className = '' }: AnimatedTextProps) {
         />
       </text>
     </svg>
+    </motion.div>
   );
 }
