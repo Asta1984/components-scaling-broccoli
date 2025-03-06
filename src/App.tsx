@@ -1,5 +1,6 @@
 import './App.css'
-import { CardWithForm } from './components/walletcard'
+import SigninButton from './components/Signin'
+import SignupButton from './components/Signup'
 import { BackgroundGradient } from './components/ui/background-gradient'
 function App() {
 
@@ -7,7 +8,8 @@ function App() {
   return (
     <>
     <BackgroundGradient>
-    <CardWithForm/>
+    <SignupButton/>
+    <SigninButton/>
     </BackgroundGradient>
     </>
   )
