@@ -1,18 +1,20 @@
-import './App.css'
-import SigninButton from './components/Signin'
-import SignupButton from './components/Signup'
-import { BackgroundGradient } from './components/ui/background-gradient'
-function App() {
+import { ProfileCard } from './components/profile'
+
+export default function App() {
 
 
   return (
     <>
-    <BackgroundGradient>
-    <SignupButton/>
-    <SigninButton/>
-    </BackgroundGradient>
+        <div className="min-h-screen flex items-center justify-center p-4">
+      <ProfileCard
+        firstName="Sienna"
+        lastName="Hewitt"
+        email="siennahewitt@gmail.com"
+        location ="United States"
+        dateofbirth='23-09-2001'
+      />
+    </div>
     </>
   )
 }
 
-export default App
