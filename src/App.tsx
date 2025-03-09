@@ -1,7 +1,7 @@
 import { ProfileCard } from './components/profile_card'
 import { Appointment_Calendar } from './components/appointment_calender'
 import Appointment_accordian from './components/appointment_sec'
-
+import Searchbar from './components/search_bar'
 
 export default function App() {
 
@@ -26,10 +26,20 @@ export default function App() {
       </div>
      </div>
     </div>
+
     <div className=' p-10 '>
     <div className='border bg-gradient-to-br from-transparent via-zinc-200 to-transparent p-6 shadow-xl  rounded-3xl border-primary border-t-8'>
       <h3 className='text-3xl mt-10 font-OnlinePrivileges flex justify-center p-4'>Todays' Appointments</h3>
       <Appointment_accordian/>
+    </div>
+    </div>
+
+    <div className='p-10 '>
+    <div className='flex border bg-gradient-to-br from-transparent via-zinc-200 to-transparent p-6 shadow-xl md:justify-center rounded-3xl border-primary border-l-8'>
+    <h3 className='text-2xl mt-5 p-2 font-OnlinePrivileges md:w-1/2'>Book Appointments</h3>
+    <div className='border bg-gradient-to-br from-transparent via-zinc-200 to-transparent p-6 shadow-xl  rounded-3xl border-primary md:w-1/2 border-t-8'>
+    <Searchbar/>
+    </div>
     </div>
     </div>
     </>
