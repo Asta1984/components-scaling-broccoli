@@ -26,8 +26,8 @@ export default function App() {
       </div>
      </div>
     </div>
-    <div className=' p-10'>
-    <div className='border rounded-3xl border-primary border-t-8'>
+    <div className=' p-10 '>
+    <div className='border bg-gradient-to-br from-transparent via-zinc-200 to-transparent p-6 shadow-xl  rounded-3xl border-primary border-t-8'>
       <h3 className='text-3xl mt-10 font-OnlinePrivileges flex justify-center p-4'>Todays' Appointments</h3>
       <Appointment_accordian/>
     </div>
